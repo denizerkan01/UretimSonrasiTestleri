@@ -36,8 +36,18 @@ def check_euler(max_roll_value, min_roll_value, max_pitch_value, min_pitch_value
     MinRollValue = min(roll_data)
     MaxRollValue = max(roll_data)
 
+    print("Min Pitch ",MinPitchValue)
+    print("Max Pitch ", MaxPitchValue)
+    print("Min Roll ", MinRollValue)
+    print("Max Roll ", MaxRollValue)
+
     mean_roll = np.mean(roll_data)
     mean_pitch = np.mean(pitch_data)
+
+    mean_roll = abs(mean_roll)
+
+    print("Mean Roll ", mean_roll)
+    print("Mean Pitch ", mean_pitch)
 
     result["RollMeanValue"] = mean_roll
     result["PitchMeanValue"] = mean_pitch
@@ -45,13 +55,13 @@ def check_euler(max_roll_value, min_roll_value, max_pitch_value, min_pitch_value
 
     if min_roll_value <= mean_roll <= max_roll_value:
         result["RollSuccess"] = True
-        #print(f"Max Roll Değeri: {MaxRollValue:.4f}")
-        #print(f"Min Roll Değeri: {MinRollValue:.4f}")
+        print(f"Max Roll Değeri: {MaxRollValue:.4f}")
+        print(f"Min Roll Değeri: {MinRollValue:.4f}")
 
     if min_pitch_value <= mean_pitch <= max_pitch_value:
         result["PitchSuccess"] = True
-        #print(f"Max Pitch Değeri: {MaxPitchValue:.4f}")
-        #print(f"Min Pitch Değeri: {MinPitchValue:.4f}")
+        print(f"Max Pitch Değeri: {MaxPitchValue:.4f}")
+        print(f"Min Pitch Değeri: {MinPitchValue:.4f}")
 
     result["EulerSuccess"] = result["RollSuccess"] and result["PitchSuccess"]
 
@@ -140,7 +150,7 @@ def S3A_EulerKontrolTesti(dlg, device_sn, base_path, sub_folder, euler_kontrol_f
         result["test_3"] = False
 
 
-    #Test - 3: 90 Derece Testi
+    #Test - 3: 180 Derece Testi
     time.sleep(1)
     print("Sistemi 3. Konuma Getirin")
     time.sleep(3)
@@ -157,13 +167,13 @@ def S3A_EulerKontrolTesti(dlg, device_sn, base_path, sub_folder, euler_kontrol_f
     
     results_euler_reset_t3 = S3a_ResetTesti.check_reset_test(sensor_data_euler_kontrol_t3)
         
-    result_euler_kontrol_t3 = check_euler(max_roll_value-180, min_roll_value-180, max_pitch_value, min_pitch_value, sensor_data_euler_kontrol_t3)
+    result_euler_kontrol_t3 = check_euler(max_roll_value+180, min_roll_value+180, max_pitch_value, min_pitch_value, sensor_data_euler_kontrol_t3)
 
     result["test_3_roll"] = result_euler_kontrol_t3["RollMeanValue"]
     result["test_3_pitch"] = result_euler_kontrol_t3["PitchMeanValue"]
     
     if result_euler_kontrol_t3["EulerSuccess"] == True:
-        #print("Test 6 - 3: \n Sonuç: BAŞARILI")
+        print("Test 6 - 3: \n Sonuç: BAŞARILI")
         result["test_3"] = True
         
     else:
