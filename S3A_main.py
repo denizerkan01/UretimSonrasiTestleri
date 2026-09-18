@@ -176,7 +176,7 @@ def S3A_main():
         shutil.copytree(s3a_example_folder, s3a_sn_folder)
     except FileExistsError:
         print(f"Dosya '{sn_dvc}' klasörde oluşturulmuştur")
-
+    """
     print("***Test 6: Euler Kontrol Testi")
     config_structure.config_structure_euler_kontrol_s3a(dlg, limits.checkbox_states_general)
     results_Euler_Kontrol = S3A_EulerKontrolTesti.S3A_EulerKontrolTesti(dlg, sn_dvc, example_folder_path, limits.euler_kontrol_folder, limits.euler_kontrol_folder, limits.max_roll_value, limits.min_roll_value, limits.max_pitch_value, limits.min_pitch_value, limits.sleep_time_euler_kontrol)
@@ -228,6 +228,6 @@ def S3A_main():
     print("***Test 7: Gyro Z Testi TAMAMLANDI")
 
     Sonuc.Sonuc(pn_dvc, sn_dvc, base_path, results_Data_Select, results_Kalibrasyon_Kontrol, results_Reset, results_Acc_Acilis, results_Acc_Dondurme, results_Euler_Kontrol, results_Gyro_Z)
-    """
+    
 if __name__ == "__main__":
     S3A_main()
