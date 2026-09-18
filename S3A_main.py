@@ -220,8 +220,6 @@ def S3A_main():
     results_Gyro_Z = S3A_GyroZTesti.S3A_GyroZTesti(dlg, sn_dvc, example_folder_path, limits.gyro_z_folder, limits.sleep_time_gyroz)
     print("***Test 7: Gyro Z Testi TAMAMLANDI")
 
-    print(results_Gyro_Z)
-
     Sonuc.Sonuc(pn_dvc, sn_dvc, base_path, results_Data_Select, results_Kalibrasyon_Kontrol, results_Reset, results_Acc_Acilis, results_Acc_Dondurme, results_Euler_Kontrol, results_Gyro_Z)
 
 if __name__ == "__main__":

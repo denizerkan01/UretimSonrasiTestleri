@@ -63,9 +63,9 @@ Result_Values = {
     "V": ("Best veya Noted", 45),
     "AE": ("0.15'ten küçük olmalı:", 40),
     "AF": ("0.15'ten küçük olmalı:", 40),
-    "AG": ("89.15'ten küçük olmalı:", 40),
+    "AG": ("89.85 - 90 aralığında olmalı:", 40),
     "AH": ("0.15'ten küçük olmalı:", 40),
-    "AI": ("179.85'ten küçük olmalı:", 40),
+    "AI": ("179.85 - 180 aralığında olmalı:", 40),
     "AJ": ("0.15'ten küçük olmalı:", 40),
     "AL": ("0.3'ten küçük olmalı:", 40),
 

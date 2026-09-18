@@ -83,10 +83,10 @@ def S3A_AccDondurmeTesti(dlg, device_sn, base_path, acc_dondurme_folder, toleran
     print("Result 1:", result_1)
 
     if result_1["result_acc_dondurme_Z"] == True:
-        result_1["test_1"] = True
+        result["test_1"] = True
         print("Konum 1 +")
     else:
-        result_1["test_1"] = False
+        result["test_1"] = False
         print("Konum 1 -")
 
     time.sleep(2)
@@ -96,10 +96,10 @@ def S3A_AccDondurmeTesti(dlg, device_sn, base_path, acc_dondurme_folder, toleran
     print("Result 2:", result_2)
     
     if result_2["result_acc_dondurme_Y"] == True:
-        result_2["test_2"] = True
+        result["test_2"] = True
         print("Konum 2 +")
     else:
-        result_2["test_2"] = False
+        result["test_2"] = False
         print("Konum 2 -")
 
     time.sleep(2)
@@ -110,10 +110,10 @@ def S3A_AccDondurmeTesti(dlg, device_sn, base_path, acc_dondurme_folder, toleran
     print("Result 3:", result_3)
         
     if result_3["result_acc_dondurme_Z"] == True:
-        result_3["test_3"] = True
+        result["test_3"] = True
         print("Konum 3 +")
     else:
-        result_3["test_3"] = False
+        result["test_3"] = False
         print("Konum 3 -")
 
     time.sleep(2)
@@ -124,10 +124,10 @@ def S3A_AccDondurmeTesti(dlg, device_sn, base_path, acc_dondurme_folder, toleran
     print("Result 4:", result_4)
         
     if result_4["result_acc_dondurme_Y"] == True:
-        result_4["test_4"] = True
+        result["test_4"] = True
         print("Konum 4 +")
     else:
-        result_4["test_4"] = False
+        result["test_4"] = False
         print("Konum 4 -")
 
     time.sleep(2)
@@ -138,10 +138,10 @@ def S3A_AccDondurmeTesti(dlg, device_sn, base_path, acc_dondurme_folder, toleran
     print("Result 5:", result_5)
         
     if result_5["result_acc_dondurme_X"] == True:
-        result_5["test_5"] = True
+        result["test_5"] = True
         print("Konum 5 +")
     else:
-        result_5["test_5"] = False
+        result["test_5"] = False
         print("Konum 5 -")
 
     time.sleep(2)
@@ -152,12 +152,12 @@ def S3A_AccDondurmeTesti(dlg, device_sn, base_path, acc_dondurme_folder, toleran
     print("Result 6:", result_6)
             
     if result_6["result_acc_dondurme_X"] == True:
-        result_6["test_6"] = True
+        result["test_6"] = True
         print("Konum 6 +")
     else:
-        result_6["test_6"] = False
-        print("Konum 6 -")
+        result["test_6"] = False
+        #print("Konum 6 -")
 
-    result["AccDondurmeSuccess"] = result_1["test_1"] and result_2["test_2"] and result_3["test_3"] and result_4["test_4"] and result_5["test_5"] and result_6["test_6"] 
+    result["AccDondurmeSuccess"] = result["test_1"] and result["test_2"] and result["test_3"] and result["test_4"] and result["test_5"] and result["test_6"] 
 
     return result

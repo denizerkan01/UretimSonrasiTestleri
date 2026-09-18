@@ -1,4 +1,4 @@
-DeviceSN = "25120060"
+DeviceSN = "25120063"
 DevicePN = "S3A097190"
 DeviceName = "ArNav S3A"
 FirmwareVersion = "00A000000002T03B"
