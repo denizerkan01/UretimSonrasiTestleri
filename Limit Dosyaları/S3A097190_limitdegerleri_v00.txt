@@ -34,10 +34,10 @@ min_ok_acc_norm_value = 9.79
 max_best_acc_norm_value = 9.81
 min_best_acc_norm_value = 9.78
 
-max_roll_value = 3
-min_roll_value = -3
-max_pitch_value = 3
-min_pitch_value = -3
+max_roll_value = 0.15
+min_roll_value = -0.15
+max_pitch_value = 0.15
+min_pitch_value = -0.15
 
 tolerance_value = 0.1
 
